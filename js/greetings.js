@@ -2,6 +2,7 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const loginButton = document.querySelector("#login-form button");
 const greeting = document.querySelector('#greeting');
+const toInput = document.querySelector("#todo-form input");
 
 // 버튼 클릭
 function onLoginBtnclick(){
@@ -26,6 +27,7 @@ function onLoginSubmit(event){
     event.preventDefault();
     //로그인 폼 숨기기
     loginForm.classList.add("hidden");
+    toInput.classList.remove("hidden");
 
     const name = loginInput.value;
 
@@ -39,7 +41,7 @@ function onLoginSubmit(event){
 
 function paintGreetings(username){
     greeting.classList.remove("hidden");
-    greeting.innerText = `환영합니다 ${username}님`;
+    greeting.innerText = `${username}님의 ToDoList`;
 }
 
 const savedUsername = localStorage.getItem("name");
@@ -50,7 +52,8 @@ if(savedUsername === null){
 }else{
     loginForm.classList.add("hidden");
     paintGreetings(savedUsername);
-
+    toInput.classList.remove("hidden");
+    toInput.addEventListener("submit", onLoginSubmit); 
 }
 
 

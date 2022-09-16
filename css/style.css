@@ -1,3 +1,116 @@
+@charset 'utf-8';
+
+html,head,title,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,table,tr,td,thead,
+tbody,tfoot,th,a,img,br,hr,pre,strong,form,label,input,select,textarea,fieldset,
+aside,address,article,audio,video,picture,option,iframe{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    /* 이미지들 사이의 공백제거 */
+    vertical-align: top; 
+    height: 100vh;
+    filter: grayscale(80%);
+    z-index: -1;
+}
+
+/* ul,ol,li {
+    list-style: none;
+} */
+
+h1,h2,h3,h4,h5,h6,strong {
+    font-weight: normal;
+    z-index: 10;
+}
+
+img,span,video,audio,label,input,textarea,select,iframe{
+    display: block;
+    z-index: 10;
+}
+
+:root{color: #fff;}
+
+input{border: none; background-color: transparent; height: 100px; width: 250px; text-align: center;margin: 0 auto;color: #fff; font-size: 25px;}
+input::placeholder{color: #fff; font-size: 25px;}
+input:focus{outline: none;}
 .hidden{
     display: none;
+}
+
+
+.text{
+    /* background-color: rgba(0,0,0,0.3); */
+    position: absolute;
+    left: 12%;
+    top: 24%;
+    text-align: center;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+#clock{
+    font-size: 86px;
+    z-index: 10;
+}
+
+#login-form button{
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    padding: 5px 15px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 25px;
+    z-index: 10;
+}
+
+#todo-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+#todo-list button{
+    border: none;
+    padding: 5px 50px;
+    background-color: transparent;
+    color: #000;
+    z-index: 10;
+}
+
+#clock{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+}
+#quote{
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    z-index: 10;
+}
+ 
+.list{
+    position: absolute;
+    top: 10%;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 0.4rem;
+    width: 40%;
+    height: 80%;
+    right: 10%;
+    z-index: 10;
+    color: #000;
+}
+#todo-list li span{
+    padding: 20px 50px;
+    z-index: 10;
 }
